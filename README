@@ -1,0 +1,20 @@
+proc-cycles
+-----------
+
+Count the (approximate) number of CPU cycles for a given time interval.
+
+BUILD
+    $ make build
+
+BINARY
+    cycles: Count the (approximate) number of CPU cycles.
+    usage:
+        cycles --time N [--proc P] [--freq [--prefix]]
+    arguments: (`*': required argument)
+        -t/--time    * sampling interval (in seconds)*
+        -c/--proc      processor number to set the thread affinity
+        -f/--freq      display the frequency for the processor
+        -p/--prefix    metric prefix for the frequency (in Hz)
+                       should be one of: {khz, mhz, ghz}
+        -h/--help      prints this help menu
+        -v/--verbose   verbose output
