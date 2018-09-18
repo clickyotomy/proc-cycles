@@ -18,3 +18,7 @@ BINARY
                        should be one of: {khz, mhz, ghz}
         -h/--help      prints this help menu
         -v/--verbose   verbose output
+
+
+NOTES
+    - Tested on linux, for x86-64 architecture.
