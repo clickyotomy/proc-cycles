@@ -21,4 +21,4 @@ BINARY
 
 
 NOTES
-    - Tested on linux, for x86-64 architecture.
+    - Tested on linux, for Intel x86-64 ISA.
