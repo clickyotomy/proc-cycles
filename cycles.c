@@ -55,7 +55,7 @@ void usage(char *program, int intro) {
     if (intro)
         printf("%s: Count the (approximate) number of CPU cycles.\n", program);
 
-    printf("usage:\n    %s --time N [--proc P] [--freq [--prefix]]\n"
+    printf("usage:\n    %s --time N [--proc P] [--freq --prefix]\n"
            "arguments: (`*\': required argument)\n"
            "    -t/--time    * sampling interval (in seconds)*\n"
            "    -c/--proc      processor number to set the thread affinity\n"
@@ -67,6 +67,9 @@ void usage(char *program, int intro) {
            program);
 }
 
+/*
+ * For metric prefix conversion.
+ */
 double scale(enum prefixes factor, uint64_t value, double sample_time) {
     switch (factor) {
         case kilo:
