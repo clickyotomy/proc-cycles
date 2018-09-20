@@ -9,7 +9,7 @@ BUILD
 BINARY
     cycles: Count the (approximate) number of CPU cycles.
     usage:
-        cycles --time N [--proc P] [--freq [--prefix]]
+        cycles --time N [--proc P] [--freq --prefix]
     arguments: (`*': required argument)
         -t/--time    * sampling interval (in seconds)*
         -c/--proc      processor number to set the thread affinity
