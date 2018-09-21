@@ -57,7 +57,7 @@ void usage(char *program, int intro) {
 
     printf("usage:\n    %s --time N [--proc P] [--freq --prefix]\n"
            "arguments: (`*\': required argument)\n"
-           "    -t/--time    * sampling interval (in seconds)*\n"
+           "    -t/--time    * sampling interval (in seconds)\n"
            "    -c/--proc      processor number to set the thread affinity\n"
            "    -f/--freq      display the frequency for the processor\n"
            "    -p/--prefix    metric prefix for the frequency (in Hz)\n"

@@ -11,7 +11,7 @@ BINARY
     usage:
         cycles --time N [--proc P] [--freq --prefix]
     arguments: (`*': required argument)
-        -t/--time    * sampling interval (in seconds)*
+        -t/--time    * sampling interval (in seconds)
         -c/--proc      processor number to set the thread affinity
         -f/--freq      display the frequency for the processor
         -p/--prefix    metric prefix for the frequency (in Hz)
