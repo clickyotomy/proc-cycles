@@ -12,8 +12,8 @@
 #include <getopt.h>
 
 #define KILO 1000
-#define MEGA KILO/1000
-#define GIGA MEGA/1000
+#define MEGA KILO * 1000
+#define GIGA MEGA * 1000
 
 /*
  * Call the `rdtsc' (op-code: 0F 31) instruction and read the outputs
@@ -73,11 +73,11 @@ void usage(char *program, int intro) {
 double scale(enum prefixes factor, uint64_t value, double sample_time) {
     switch (factor) {
         case kilo:
-            return (value / sample_time / KILO);
+            return (value / (sample_time * KILO));
         case mega:
-            return (value / sample_time / MEGA);
+            return (value / (sample_time * MEGA));
         case giga:
-            return (value / sample_time / GIGA);
+            return (value / (sample_time * GIGA));
         default:
             return -1;
     }
@@ -166,12 +166,11 @@ int main(int argc, char *argv[]) {
                 metric_pfx = optarg;
                 break;
             case 'h':
+            case '?':
                 usage(argv[0], 1);
                 exit(EXIT_SUCCESS);
             case 'v':
                 verbose = 1;
-                break;
-            case '?':
                 break;
             default:
                 exit(EXIT_FAILURE);
